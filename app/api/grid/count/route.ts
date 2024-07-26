@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { array, number, object, string, ValidationError } from "yup";
-import { generateGridTilesMultiThread } from "@/helper/server/spatial";
+import { generateGridTilesMultiThread } from "@/helpers/server/spatial";
 import { cpus } from "os";
 
 // Define a Yup schema for a single GeoJSON Feature

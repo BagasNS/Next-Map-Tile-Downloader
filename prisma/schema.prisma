@@ -18,3 +18,12 @@ model calculationGridTileCache {
 
   @@unique([region, zoomLevel])
 }
+
+model downloadResult {
+  id         String  @id @default(uuid())
+  x          Int
+  y          Int
+  z          Int
+  status     Boolean
+  resultFile String?
+}

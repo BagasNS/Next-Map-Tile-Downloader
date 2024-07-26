@@ -40,3 +40,5 @@ cache
 .idea
 # Temporary Ignore Until All table settled
 /prisma/migrations
+/dist/
+/workers/dist/
