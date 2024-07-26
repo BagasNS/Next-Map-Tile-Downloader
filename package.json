@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "concurrently --kill-others \"next dev\" \"npm run watch:workers\"",
+    "build": "build:workers && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:workers": "tsc -p tsconfig.worker.json",
+    "watch:workers": "tsc -p tsconfig.worker.json --watch"
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.1.5",
