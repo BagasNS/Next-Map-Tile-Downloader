@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Open Street Maps",
+    "options": {
+      "Open Street Maps": "https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    },
+    "limits": {
+      "min": 1,
+      "max": 20
+    },
+    "attribution": "Map Data &copy; <a href='https://www.openstreetmap.org'>Open Street Maps</a>"
+  },
+  {
+    "name": "Bing Maps",
+    "options": {
+      "Bing Maps": "https://ecn.t0.tiles.virtualearth.net/tiles/r{quadkey}.jpeg?g=129&mkt=en&stl=H",
+      "Bing Maps Satellite": "https://ecn.t0.tiles.virtualearth.net/tiles/a{quadkey}.jpeg?g=129&mkt=en&stl=H",
+      "Bing Maps Hybrid": "https://ecn.t0.tiles.virtualearth.net/tiles/h{quadkey}.jpeg?g=129&mkt=en&stl=H"
+    },
+    "limits": {
+      "min": 1,
+      "max": 22
+    },
+    "attribution": "Map Data &copy; <a href='https://www.bing.com/maps'>Bing Maps</a>"
+  },
+  {
+    "name": "Google Maps",
+    "options": {
+      "Google Maps": "https://mt0.google.com/vt?lyrs=m&x={x}&y={y}&z={z}",
+      "Google Maps Satellite": "https://mt0.google.com/vt?lyrs=s&x={x}&y={y}&z={z}",
+      "Google Maps Hybrid": "https://mt0.google.com/vt?lyrs=y&x={x}&y={y}&z={z}",
+      "Google Maps Terrain": "https://mt0.google.com/vt?lyrs=p&x={x}&y={y}&z={z}"
+    },
+    "limits": {
+      "min": 1,
+      "max": 24
+    },
+    "attribution": "Map Data &copy; <a href='https://www.google.com/maps'>Google Maps</a>"
+  },
+  {
+    "name": "Other",
+    "options": {
+      "ESRI World Imagery": "https://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+      "Wikimedia Maps": "https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png",
+      "Carto Light": "https://cartodb-basemaps-c.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+      "Carto Dark": "https://cartodb-basemaps-c.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png"
+    },
+    "limits": {
+      "min": 1,
+      "max": 20
+    },
+    "attribution": "Map Data &copy; <a href='https://www.esri.com'>ESRI</a>, <a href='https://www.wikimedia.org'>Wikimedia Maps</a>, <a href='https://carto.com'>Carto</a>"
+  }
+]
