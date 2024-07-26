@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { array, number, object, string, ValidationError } from "yup";
-import { generateGridTilesMultiThread } from "@/helper/server/spatial";
+import { generateGridTilesMultiThread } from "@/helpers/server/spatial";
 import { cpus } from "os";
 
 // Define a Yup schema for a single GeoJSON Feature
@@ -65,9 +65,24 @@ export async function POST(req: NextRequest) {
     }, { status: 400 })
   }
 
-  return res.json({
-    status: 'success',
-    code: 200,
-    data: tiles.length
-  })
+  const downloadCoords = tiles.map(tile => ({ x: tile.x, y: tile.y, z: tile.z }));
+
+  // TODO: Save To DB With JobId
+
+
+  // possible failed send response due to data is exceeding JSON size limit
+  try {
+    return res.json({
+      status: 'success',
+      code: 200,
+      data: downloadCoords
+    })
+  } catch (e) {
+    console.error(e);
+    return res.json({
+      status: 'error',
+      code: 500,
+      message: 'data is too large to serve via JSON response'
+    }, { status: 500 })
+  }
 }

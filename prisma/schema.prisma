@@ -12,7 +12,18 @@ datasource db {
 
 model calculationGridTileCache {
   id         String @id @default(uuid())
-  region     String @unique
+  region     String
   zoomLevel  Int
   resultFile String
+
+  @@unique([region, zoomLevel])
+}
+
+model downloadResult {
+  id         String  @id @default(uuid())
+  x          Int
+  y          Int
+  z          Int
+  status     Boolean
+  resultFile String?
 }

@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "Node",
+    "target": "es6",
+    "outDir": "./workers/dist",
+    "importHelpers": true,
+    "esModuleInterop": true,
+    "incremental": false,
+    "composite": false,
+    "strict": true,
+    "noEmit": false
+  },
+  "include": [
+    "workers/*.ts"
+  ]
+}
